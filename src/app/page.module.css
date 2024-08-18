@@ -1,0 +1,21 @@
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.main a {
+  color: #bfffc3;
+}
+.main a:hover {
+  color: #81fe88;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 400;
+}
