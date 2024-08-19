@@ -7,9 +7,7 @@ import Link from 'next/link';
 
 async function getAllPosts(page) {
   try {
-    const response = await fetch(
-      `http://localhost:3042/posts?_page=${page}&_per_page=6`
-    );
+    const response = await fetch(`http://localhost:3042/posts?_page=${page}&_per_page=6`);
     if (!response.ok) throw new Error('Falha na rede');
     logger.info('Posts carregados com sucesso');
     return response.json();
@@ -25,9 +23,7 @@ export default async function Home({ searchParams }) {
 
   return (
     <main className={styles.main}>
-      {posts.map((post) => (
-        <CardPost post={post} key={post.id} />
-      ))}
+      {posts && posts.map((post) => <CardPost post={post} key={post.id} />)}
       <footer className={styles.footer}>
         {prev && <Link href={`/?page=${prev}`}>&lt; Página anterior</Link>}
         {next && <Link href={`/?page=${next}`}>Próxima página &gt;</Link>}

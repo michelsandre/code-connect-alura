@@ -2,3 +2,5 @@
 {"level":"error","message":"Ops, algo deu errado"}
 {"level":"error","message":"Ops, algo deu errado"}
 {"level":"error","message":"Ops, algo deu errado: Falha na rede"}
+{"level":"error","message":"Ops, algo deu errado: fetch failed"}
+{"level":"error","message":"Ops, algo deu errado: fetch failed"}

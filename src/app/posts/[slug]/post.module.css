@@ -1,9 +1,16 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 24px;
+}
 .card {
   display: flex;
   flex-direction: column;
   background-color: #171d1f;
-  width: 486px;
+  width: 993px;
   border-radius: 8px;
+  height: 100%;
 }
 
 .figure {
@@ -29,7 +36,7 @@
   gap: 8px;
 }
 .section h2 {
-  font-size: 18px;
+  font-size: 22px;
   line-height: 1.5;
   font-weight: 600;
 }
@@ -37,6 +44,13 @@
   font-size: 15px;
   line-height: 1.5;
   font-weight: 400;
+}
+
+.section code {
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 400;
+  font-family: var(--font-roboto-mono);
 }
 
 .footer {
