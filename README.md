@@ -31,3 +31,16 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ```bash
 json-server ./src/database/posts.json -p 3042
 ```
+
+## Comandos prisma
+
+```bash
+# Adicionar Prisma CLI
+npm i prisma
+
+# Geração de migration
+npx prisma migrate dev --name init
+
+# Instalar Prisma Client
+npx prisma generate
+```
