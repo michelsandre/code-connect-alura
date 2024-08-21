@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 56px;
+  text-align: center;
+  width: 995px;
+}
+
+.h1 {
+  color: #81fe88;
+  font-size: 37px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.h2 {
+  color: #bcbcbc;
+  font-size: 26px;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+.link {
+  color: #bfffc3;
+  font-weight: 400;
+  size: 18px;
+}
+.link:hover {
+  color: #81fe88;
+}

@@ -11,3 +11,6 @@
 {"error":{"clientVersion":"5.18.0","name":"PrismaClientValidationError"},"level":"error","message":"Falha ao obter posts"}
 {"error":{"clientVersion":"5.18.0","name":"PrismaClientValidationError"},"level":"error","message":"Falha ao obter posts"}
 {"error":{"clientVersion":"5.18.0","name":"PrismaClientValidationError"},"level":"error","message":"Falha ao obter posts"}
+{"level":"error","message":"Algo deu errado: fetch failed"}
+{"level":"error","message":"Algo deu errado: fetch failed"}
+{"level":"error","message":"Algo deu errado: fetch failed"}
