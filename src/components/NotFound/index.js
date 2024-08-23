@@ -7,7 +7,7 @@ import Link from 'next/link';
 export const NotFoundError = () => {
   return (
     <div className={styles.container}>
-      <Image src={imageHeader} width={656} height={367} />
+      <Image src={imageHeader} width={656} height={367} alt="Not Found" />
 
       <section className={styles.section}>
         <h1 className={styles.h1}>OPS! Página não encontrada.</h1>

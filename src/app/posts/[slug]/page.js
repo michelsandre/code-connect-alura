@@ -5,6 +5,8 @@ import { Avatar } from '@/components/Avatar';
 import { remark } from 'remark';
 import html from 'remark-html';
 import { Roboto_Mono } from 'next/font/google';
+import db from '../../../../prisma/db';
+import { redirect } from 'next/navigation';
 
 const roboto_mono = Roboto_Mono({
   weight: ['400', '600'],
@@ -15,15 +17,16 @@ const roboto_mono = Roboto_Mono({
 
 async function getPostBySlug(slug) {
   try {
-    const response = await fetch(`http://localhost:3042/posts?slug=${slug}`);
-    if (!response.ok) throw new Error('Falha na rede');
+    const post = await db.post.findFirst({
+      where: {
+        slug,
+      },
+      include: {
+        author: true,
+      },
+    });
 
-    const data = await response.json();
-    if (data.length === 0) {
-      return {};
-    }
-
-    const post = data[0];
+    if (!post) throw new Error(`Post com o slug ${slug} não foi encontrado`);
 
     const processedContent = await remark().use(html).process(post.markdown);
     const contentHtml = processedContent.toString();
@@ -32,9 +35,11 @@ async function getPostBySlug(slug) {
 
     return post;
   } catch (error) {
-    console.log(error);
-    logger.error('Algo deu errado: ' + error.message);
-    return {};
+    logger.error('Falha ao obter o post com slug: : ', {
+      slug,
+      error,
+    });
+    redirect('/not-found');
   }
 }
 
