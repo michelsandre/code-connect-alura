@@ -16,3 +16,10 @@ body {
   gap: 28px;
   min-height: 100vh;
 }
+
+.app-content {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  width: 996px;
+}

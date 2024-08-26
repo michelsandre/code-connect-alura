@@ -1,6 +1,7 @@
 import { Aside } from '@/components/Aside';
 import { Prompt } from 'next/font/google';
 import './globals.css';
+import { SearchForm } from '@/components/SearchForm';
 
 export const metadata = {
   title: 'Code Connect',
@@ -19,7 +20,10 @@ export default function RootLayout({ children }) {
       <body>
         <div className="app-container">
           <Aside />
-          {children}
+          <div className="app-content">
+            <SearchForm />
+            {children}
+          </div>
         </div>
       </body>
     </html>
