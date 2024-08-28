@@ -16,7 +16,7 @@ async function getAllPosts(page, searchTerm) {
         // mode: 'insensitive', // Only for PostgreSQL
       };
     }
-    const perPage = 4;
+    const perPage = 6;
     const skip = (page - 1) * perPage;
 
     const totalItems = await db.post.count({ where });
