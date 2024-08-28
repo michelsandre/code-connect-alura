@@ -53,12 +53,12 @@ export default async function Home({ searchParams }) {
       {posts && posts.map((post) => <CardPost post={post} key={post.id} />)}
       <footer className={styles.footer}>
         {prev && (
-          <Link href={`/?${searchTerm ? `q=${searchTerm}&` : ''}page=${prev}`}>
+          <Link href={{ pathname: '/', query: { page: prev, q: searchTerm } }}>
             &lt; Página anterior
           </Link>
         )}
         {next && (
-          <Link href={`/?${searchTerm ? `q=${searchTerm}&` : ''}page=${next}`}>
+          <Link href={{ pathname: '/', query: { page: next, q: searchTerm } }}>
             Próxima página &gt;
           </Link>
         )}
