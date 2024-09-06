@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { IconButton } from '../IconButton';
 import { ThumbsUp } from '../Icons/ThumbsUp';
 import { incrementThumbsUp } from '@/actions';
+import { ThumbsUpButton } from './ThumbsUpButton';
 
 export const CardPost = ({ post }) => {
   const submitThumbsUp = incrementThumbsUp.bind(null, post);
@@ -31,9 +32,7 @@ export const CardPost = ({ post }) => {
       <footer className={styles.footer}>
         <div>
           <form action={submitThumbsUp}>
-            <IconButton>
-              <ThumbsUp />
-            </IconButton>
+            <ThumbsUpButton />
           </form>
           <p>{post.likes}</p>
         </div>
