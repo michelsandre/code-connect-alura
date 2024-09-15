@@ -1,0 +1,9 @@
+.form {
+  display: grid;
+  gap: 24px;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+}

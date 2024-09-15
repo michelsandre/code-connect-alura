@@ -55,3 +55,9 @@
   text-decoration: none;
   cursor: pointer;
 }
+
+.actions {
+  display: flex;
+  gap: 16px;
+  align-items: flex-end;
+}

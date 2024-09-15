@@ -4,11 +4,13 @@ import styles from './cardPost.module.css';
 import Link from 'next/link';
 import { IconButton } from '../IconButton';
 import { ThumbsUp } from '../Icons/ThumbsUp';
-import { incrementThumbsUp } from '@/actions';
+import { incrementThumbsUp, postComment } from '@/actions';
 import { ThumbsUpButton } from './ThumbsUpButton';
+import { ModalComment } from '../ModalComment';
 
 export const CardPost = ({ post }) => {
   const submitThumbsUp = incrementThumbsUp.bind(null, post);
+  const submitComment = postComment.bind(null, post);
 
   return (
     // <Link href={`/posts/${post.slug}`} className={styles.link}>
@@ -30,13 +32,20 @@ export const CardPost = ({ post }) => {
         <Link href={`/posts/${post.slug}`}>Ver detalhes</Link>
       </section>
       <footer className={styles.footer}>
-        <div>
+        <div className={styles.actions}>
           <form action={submitThumbsUp}>
             <ThumbsUpButton />
+            <p>{post.likes}</p>
           </form>
-          <p>{post.likes}</p>
+          <div>
+            <ModalComment action={submitComment} />
+            <p>{post.comments.length}</p>
+          </div>
         </div>
-        <Avatar imageSrc={post.author.avatar} name={`@${post.author.username}`} />
+        <Avatar
+          imageSrc={post.author.avatar}
+          name={`@${post.author.username}`}
+        />
       </footer>
     </article>
     // </Link>

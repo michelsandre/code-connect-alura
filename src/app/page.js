@@ -32,6 +32,7 @@ async function getAllPosts(page, searchTerm) {
       orderBy: { id: 'desc' },
       include: {
         author: true,
+        comments: true,
       },
     });
 
@@ -46,7 +47,11 @@ export default async function Home({ searchParams }) {
   const currentPage = parseInt(searchParams?.page || 1);
   const searchTerm = searchParams?.q;
 
-  const { data: posts, prev, next } = await getAllPosts(currentPage, searchTerm);
+  const {
+    data: posts,
+    prev,
+    next,
+  } = await getAllPosts(currentPage, searchTerm);
 
   return (
     <main className={styles.main}>

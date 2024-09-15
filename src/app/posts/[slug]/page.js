@@ -23,6 +23,7 @@ async function getPostBySlug(slug) {
       },
       include: {
         author: true,
+        comments: true,
       },
     });
 
@@ -66,14 +67,22 @@ const PagePost = async ({ params }) => {
           <p>{post.body}</p>
         </section>
         <footer className={styles.footer}>
-          <Avatar imageSrc={post.author.avatar} name={`@${post.author.username}`} />
+          <Avatar
+            imageSrc={post.author.avatar}
+            name={`@${post.author.username}`}
+          />
         </footer>
       </article>
 
       <article>
         <header>
           <h2
-            style={{ color: '#888888', fontSize: '22px', lineHeight: '1.5', marginBottom: '8px' }}
+            style={{
+              color: '#888888',
+              fontSize: '22px',
+              lineHeight: '1.5',
+              marginBottom: '8px',
+            }}
           >
             Código:
           </h2>

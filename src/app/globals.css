@@ -24,3 +24,8 @@ body {
   width: 996px;
   height: 100%;
 }
+
+::backdrop {
+  background-color: #171d1f;
+  opacity: 0.8;
+}

@@ -1,0 +1,10 @@
+.textarea {
+  border-radius: 8px;
+  background-color: #bcbcbc;
+  resize: none;
+  padding: 16px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  color: #3e3e3f;
+}
