@@ -7,6 +7,7 @@ import html from 'remark-html';
 import { Roboto_Mono } from 'next/font/google';
 import db from '../../../../prisma/db';
 import { redirect } from 'next/navigation';
+import { CommentList } from '@/components/CommentList';
 
 const roboto_mono = Roboto_Mono({
   weight: ['400', '600'],
@@ -23,7 +24,11 @@ async function getPostBySlug(slug) {
       },
       include: {
         author: true,
-        comments: true,
+        comments: {
+          include: {
+            author: true,
+          },
+        },
       },
     });
 
@@ -93,6 +98,10 @@ const PagePost = async ({ params }) => {
           </section>
         </div>
       </article>
+      <div className={styles.comments_container}>
+        <h2 className={styles.comments_h2}>Comentários:</h2>
+        <CommentList comments={post.comments} />
+      </div>
     </div>
   );
 };

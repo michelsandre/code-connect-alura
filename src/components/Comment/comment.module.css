@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.avatar {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-shrink: 0;
+}
+.p {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #171d1f;
+}
+.strong {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #171d1f;
+}
