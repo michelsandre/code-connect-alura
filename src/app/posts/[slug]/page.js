@@ -27,6 +27,14 @@ async function getPostBySlug(slug) {
         comments: {
           include: {
             author: true,
+            children: {
+              include: {
+                author: true,
+              },
+            },
+          },
+          where: {
+            parentId: null,
           },
         },
       },
@@ -98,10 +106,7 @@ const PagePost = async ({ params }) => {
           </section>
         </div>
       </article>
-      <div className={styles.comments_container}>
-        <h2 className={styles.comments_h2}>Comentários:</h2>
-        <CommentList comments={post.comments} />
-      </div>
+      <CommentList comments={post.comments} />
     </div>
   );
 };

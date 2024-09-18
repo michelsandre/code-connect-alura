@@ -73,3 +73,6 @@
 {"error":{"clientVersion":"5.18.0","name":"PrismaClientValidationError"},"level":"error","message":"Falha ao obter posts"}
 {"error":{"clientVersion":"5.18.0","name":"PrismaClientValidationError"},"level":"error","message":"Falha ao obter posts"}
 {"error":{"clientVersion":"5.18.0","name":"PrismaClientValidationError"},"level":"error","message":"Falha ao obter posts"}
+{"error":{},"level":"error","message":"Falha ao obter o post com slug: : ","slug":"gerenciamento-de-estado-com-redux"}
+{"error":{},"level":"error","message":"Falha ao obter o post com slug: : ","slug":"gerenciamento-de-estado-com-redux"}
+{"error":{},"level":"error","message":"Falha ao obter o post com slug: : ","slug":"construindo-spa-com-vuejs"}

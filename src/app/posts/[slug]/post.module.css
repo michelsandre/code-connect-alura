@@ -63,19 +63,3 @@
   text-decoration: none;
   cursor: pointer;
 }
-
-.comments_container {
-  margin-top: 16px;
-  padding: 32px;
-  background-color: #888888;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.comments_h2 {
-  font-weight: 600;
-  font-size: 22px;
-  line-height: 1.5;
-  color: #171d1f;
-}
